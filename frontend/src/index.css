@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Base token defaults — these are overridden at runtime by ThemeContext when
+  it injects the active theme's CSS custom properties into :root.
+  These defaults (the Light theme values) prevent a flash of un-styled content
+  on first load before the theme fetch completes.
+
+  Values are stored as bare RGB triplets ("R G B") so that Tailwind's opacity
+  modifier syntax works: bg-cp-primary/10 → rgb(var(--color-primary) / 0.1)
+*/
+:root {
+  --color-bg:         15 15 25;      /* #0F0F19 — near-black navy */
+  --color-surface:    26 27 46;      /* #1A1B2E — dark slate */
+  --color-text:       240 241 255;   /* #F0F1FF — off-white */
+  --color-text-muted: 130 134 168;   /* #8286A8 — muted purple-gray */
+  --color-primary:    255 107 107;   /* #FF6B6B — coral */
+  --color-accent:     78 205 196;    /* #4ECDC4 — teal */
+  --color-border:     45 46 75;      /* #2D2E4B — dark border */
+  --color-danger:     255 82 82;     /* #FF5252 — red */
+}
+
+/* Smooth theme transitions — optional, remove if it causes visual issues */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* Restore instant transitions for interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  transition-duration: 75ms;
+}

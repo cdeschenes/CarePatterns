@@ -1,0 +1,36 @@
+services:
+  backend:
+    build: ./backend
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - carepatterns-data:/app/data
+    healthcheck:
+      # /health is an unauthenticated endpoint registered in main.py.
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  frontend:
+    build:
+      context: ./frontend
+      # VITE_ vars must be present at build time — they are baked into the
+      # compiled JS bundle by Vite. Pass them as build args from the .env file.
+      args:
+        - VITE_API_TOKEN
+        - VITE_REMINDER_POLL_INTERVAL
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  carepatterns-data:
+    driver: local
