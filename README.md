@@ -20,10 +20,10 @@ If you're comfortable running self-hosted services and prefer keeping your data 
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/main_screen.png" width="200" alt="Dashboard" /></td>
-    <td align="center"><img src="docs/screenshots/add_item.png" width="200" alt="Add Item" /></td>
-    <td align="center"><img src="docs/screenshots/reports.png" width="200" alt="Reports" /></td>
-    <td align="center"><img src="docs/screenshots/settings.png" width="200" alt="Settings" /></td>
+    <td align="center"><img src="docs/screenshots/main_screen.png" width="200" height="433" alt="Dashboard" /></td>
+    <td align="center"><img src="docs/screenshots/add_item.png" width="200" height="433" alt="Add Item" /></td>
+    <td align="center"><img src="docs/screenshots/reports.png" width="200" height="433" alt="Reports" /></td>
+    <td align="center"><img src="docs/screenshots/settings.png" width="200" height="433" alt="Settings" /></td>
   </tr>
   <tr valign="top">
     <td align="center"><b>Dashboard</b><br/>Tap a card to log a dose. Color fill tracks daily progress. Drag the ⠿ handle to reorder.</td>
