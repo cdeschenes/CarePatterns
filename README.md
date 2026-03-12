@@ -19,7 +19,7 @@ If you're comfortable running self-hosted services and prefer keeping your data 
 ## Screenshots
 
 <table>
-  <tr>
+  <tr valign="top">
     <td align="center"><img src="docs/screenshots/main_screen.png" width="200" height="433" alt="Dashboard" /></td>
     <td align="center"><img src="docs/screenshots/add_item.png" width="200" height="433" alt="Add Item" /></td>
     <td align="center"><img src="docs/screenshots/reports.png" width="200" height="433" alt="Reports" /></td>
